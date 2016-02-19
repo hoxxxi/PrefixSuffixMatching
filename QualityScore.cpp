@@ -1,9 +1,9 @@
 //============================================================================
 // Name        : QualityScore.cpp
 // Author      : Yordan
-// Version     : 1.0
+// Version     : 1.1
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Quality score calculator
 //============================================================================
 
 #include <iostream>

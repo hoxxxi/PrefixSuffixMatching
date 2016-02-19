@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : NGramGrap.cpp
 // Author      : Yordan
-// Version     : 1.0
+// Version     : 1.1
 // Copyright   : Your copyright notice
 // Description : Di Gram Graph
 //============================================================================

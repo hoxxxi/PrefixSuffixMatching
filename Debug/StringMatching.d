@@ -1,4 +1,4 @@
-StringMatching.d: ../StringMatching.cpp ../ProbMatrix.cpp \
+StringMatching.o: ../StringMatching.cpp ../ProbMatrix.cpp \
  ../NGramGraph.cpp ../QualityScore.cpp
 
 ../ProbMatrix.cpp:

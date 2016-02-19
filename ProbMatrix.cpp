@@ -1,9 +1,11 @@
-/*
- * ProbabilityMatrix.cpp
- *
- *  Created on: 11.02.2016 г.
- *      Author: User
- */
+//============================================================================
+// Name        : ProbMatrix.cpp
+// Author      : Yordan
+// Version     : 1.1
+// Copyright   : Your copyright notice
+// Description : Probability Matrix Combination of quality score and ngram
+//============================================================================
+
 
 #include <fstream>
 #include <string>

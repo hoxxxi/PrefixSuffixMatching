@@ -1,1 +1,1 @@
-QualityScore.d: ../QualityScore.cpp
+QualityScore.o: ../QualityScore.cpp

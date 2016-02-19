@@ -1,1 +1,1 @@
-NGramGraph.d: ../NGramGraph.cpp
+NGramGraph.o: ../NGramGraph.cpp

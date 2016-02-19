@@ -1,9 +1,11 @@
-/*
- * SimpleStringMatch.cpp
- *
- *  Created on: 11.02.2016 г.
- *      Author: User
- */
+//============================================================================
+// Name        : String Matching.cpp
+// Author      : Yordan
+// Version     : 1.1
+// Copyright   : Your copyright notice
+// Description : Extraction of two files, string matching & input to WPT
+//============================================================================
+
 
 #include <algorithm>
 #include <fstream>

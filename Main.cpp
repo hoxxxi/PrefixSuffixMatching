@@ -1,3 +1,12 @@
+//============================================================================
+// Name        : Main.cpp
+// Author      : Yordan
+// Version     : 1.1
+// Copyright   : Your copyright notice
+// Description : main
+//============================================================================
+
+
 #include <algorithm>
 #include <fstream>
 #include <iostream>
