@@ -18,18 +18,18 @@ using namespace std;
 
 struct StringMatching
 {
-	ProbabilityMatrix left;
-	ProbabilityMatrix right;
+	ProbabilityMatrix* left;
+	ProbabilityMatrix* right;
 
-	StringMatching(ProbabilityMatrix leftIn, ProbabilityMatrix rightIn) : left(leftIn), right(rightIn){}
+	StringMatching(ProbabilityMatrix* leftIn, ProbabilityMatrix* rightIn){left = leftIn; right = rightIn;}
 
 	int overlap(){
-		int looplimit = min(left.sequence.size(),right.sequence.size());
+		int looplimit = min((*left).sequence.size(),(*right).sequence.size());
 		for(int i = 0; i < looplimit; i++)
 		{
-			int window = left.sequence.size()-i;
+			int window = (*left).sequence.size()-i;
 
-			if(left.sequence.substr(left.sequence.size()-window,window)==right.sequence.substr(0,window))
+			if((*left).sequence.substr((*left).sequence.size()-window,window)==(*right).sequence.substr(0,window))
 			{
 				return window;
 			}
@@ -42,12 +42,12 @@ struct StringMatching
 		stringstream score;
 		int overlapping = overlap();
 
-		sequence << left.sequence.substr(0,left.sequence.size()-overlapping)<<right.sequence;
-		score << left.score.substr(0,left.score.size()-overlapping);
+		sequence << (*left).sequence.substr(0,(*left).sequence.size()-overlapping)<<(*right).sequence;
+		score << (*left).score.substr(0,(*left).score.size()-overlapping);
 
 
-		string OverlappingQSsequenceLeft = left.score.substr(left.score.size()-overlapping,overlapping);
-		string OverlappingQSsequenceRight = right.score.substr(0,overlapping);
+		string OverlappingQSsequenceLeft = (*left).score.substr((*left).score.size()-overlapping,overlapping);
+		string OverlappingQSsequenceRight = (*right).score.substr(0,overlapping);
 
 		for(int i = 0; i<overlapping;i++)
 		{
@@ -58,7 +58,7 @@ struct StringMatching
 			char temp = (char) ((tempLeft+tempRight)/2);
 			score<<temp;
 		}
-		score<<right.score.substr(overlapping,right.score.size()-overlapping);
+		score<<(*right).score.substr(overlapping,(*right).score.size()-overlapping);
 
 		ProbabilityMatrix joinedMatrix(sequence.str(),score.str());
 		return joinedMatrix;

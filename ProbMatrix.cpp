@@ -62,7 +62,7 @@ struct ProbabilityMatrix
 			}
 			s<<"\n";
 		}
-		cout << s.str();
+		cout << s.str() <<endl;
 		ofstream myfile;
 		myfile.open ("output.txt");
 		myfile << s.str();
