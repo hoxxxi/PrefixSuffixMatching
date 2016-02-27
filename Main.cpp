@@ -30,29 +30,54 @@ char dnaInverse(char in)
 }
 int main()
 {
+	string line;
+	int lineCounter;
+
 	string left_sequenceID;
 	string left_sequence;
 	string left_score;
+
 	ifstream left_file ("left.txt", ios::in);
 	if (left_file.is_open())
 	{
-		getline (left_file,left_sequenceID);
-		getline (left_file,left_sequence);
-		getline (left_file,left_sequenceID);
-		getline (left_file,left_score);
+		lineCounter = 0;
+		while (getline(left_file, line))
+		{
+			switch (lineCounter%5)
+			{
+			  case 0: left_sequenceID = line; break;
+			  case 1: left_sequence = line; break;
+			  case 2: break;
+			  case 3: left_score = line; break;
+			  case 4: break;
+			  default: break;
+			}
+			lineCounter++;
+		}
 		left_file.close();
 	}
 
 	string right_sequenceID;
 	string right_sequence;
 	string right_score;
+
 	ifstream right_file ("right.txt", ios::in);
 	if (right_file.is_open())
 	{
-		getline (right_file,right_sequenceID);
-		getline (right_file,right_sequence);
-		getline (right_file,right_sequenceID);
-		getline (right_file,right_score);
+		lineCounter = 0;
+		while (getline(right_file, line))
+		{
+			switch (lineCounter%5)
+			{
+			  case 0: right_sequenceID = line; break;
+			  case 1: right_sequence = line; break;
+			  case 2: break;
+			  case 3: right_score = line; break;
+			  case 4: break;
+			  default: break;
+			}
+			lineCounter++;
+		}
 		right_file.close();
 	}
 
