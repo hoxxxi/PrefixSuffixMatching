@@ -68,6 +68,10 @@ struct ProbabilityMatrix
 		myfile << s.str();
 		myfile.close();
 	}
+	double** getMatrix()
+	{
+		return matrix;
+	}
 };
 //int main() {
 //

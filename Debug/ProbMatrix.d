@@ -1,4 +1,4 @@
-ProbMatrix.o: ../ProbMatrix.cpp ../NGramGraph.cpp ../QualityScore.cpp
+ProbMatrix.d: ../ProbMatrix.cpp ../NGramGraph.cpp ../QualityScore.cpp
 
 ../NGramGraph.cpp:
 

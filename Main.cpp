@@ -12,6 +12,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include </home/yordan/workspace/ProbabilityMatrix/lib/defs.h>
+
 
 #include "StringMatching.cpp"
 
@@ -117,6 +119,39 @@ int main()
 		ProbabilityMatrix resultingMatrix = in.joinedMatrix();
 		resultingMatrix.setInitialMatrix();
 		resultingMatrix.calculateDistributedMatrixProbability(100);
+
+
+
+
+//		string empty;
+//		int z = 100;//Threshold
+//		string alphabet = DNA;
+//		unsigned int sigma = alphabet.size();
+//		int n = resultingMatrix.sequence.size();
+//		double** y = resultingMatrix.getMatrix();
+//		if ( ! ( preparation ( empty, y, n, z, alphabet, 0 ) ) )
+//		{
+//			return 0;
+//		}
+//		else
+//		{
+//			for ( unsigned int i = 0; i < n; i++ )
+//				delete[] y[i];
+//			delete[] y;
+//			unsigned int * WP = new unsigned int [n];
+//			wptable ( sigma, z, WP );
+//#if 1
+//			/*print*/
+//			cout << "Weighted Prefix Table:\n";
+//			for ( unsigned int i = 0; i < n; i++ )
+//			{
+//				cout << WP[i] << '\n';
+//			}
+//#endif
+//		}
+
+
+
 
 		cout<<resultingMatrix.sequence<<"\n";
 		cout<<resultingMatrix.score<<"\n";
